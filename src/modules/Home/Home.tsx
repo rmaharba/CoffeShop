@@ -1,10 +1,9 @@
 import React from 'react';
-import {View, Button} from 'react-native';
+import {View} from 'react-native';
+
+import {Button} from '../../components';
 
 import {styles} from './styles';
-
-import {Typography} from '../../components';
-import {resPx} from '../../utils';
 
 export const Home = ({navigation}: any) => {
   const onPressNavigation = () => {
@@ -12,6 +11,7 @@ export const Home = ({navigation}: any) => {
   };
   return (
     <View style={styles.container}>
+      <Button type="l" label={'Buy Now'} onPress={onPressNavigation} />
       {/* <Button onPress={onPressNavigation} title="Navigate to Order" /> */}
     </View>
   );
