@@ -1,8 +1,9 @@
 import React from 'react';
-import {View, Text, Button} from 'react-native';
+import {View, Button} from 'react-native';
 
 import {styles} from './styles';
 
+import {Typography} from '../../components';
 import {resPx} from '../../utils';
 
 export const Home = ({navigation}: any) => {
@@ -11,8 +12,7 @@ export const Home = ({navigation}: any) => {
   };
   return (
     <View style={styles.container}>
-      <Text style={{marginBottom: resPx(5)}}>Home Screen</Text>
-      <Button onPress={onPressNavigation} title="Navigate to Order" />
+      {/* <Button onPress={onPressNavigation} title="Navigate to Order" /> */}
     </View>
   );
 };

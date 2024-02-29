@@ -11,7 +11,7 @@ const scaleWithWidth = windowDimensions.width / 320; // 320 based on phone scale
 export function textReponsive(pixels: number): number {
   const size = pixels * scaleWithWidth;
   if (Platform.OS === 'ios') {
-    return Math.round(PixelRatio.roundToNearestPixel(size));
+    return Math.round(PixelRatio.roundToNearestPixel(size) - 2);
   }
 
   return Math.round(PixelRatio.roundToNearestPixel(size)) - 3;
