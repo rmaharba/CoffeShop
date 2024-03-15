@@ -1,10 +1,6 @@
-import {View, Text} from 'react-native';
 import React from 'react';
+import {GetStartedLoad} from 'src/modules';
 
 export const GetStartedScreen = () => {
-  return (
-    <View>
-      <Text>GetStartedScreen</Text>
-    </View>
-  );
+  return <GetStartedLoad />;
 };

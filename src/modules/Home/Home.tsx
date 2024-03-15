@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 
-import {Button} from '../../components';
+import {Button} from 'src/components';
 
 import {styles} from './styles';
 

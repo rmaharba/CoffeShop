@@ -9,22 +9,26 @@ import {
   GetStartedScreen,
   DeliveryDetailScreen,
 } from '../screens';
-import {homeOptions} from './options';
+import {headerDisabled} from './options';
 
 const Stack = createNativeStackNavigator();
 
 export const MainNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator initialRouteName="GetStarted">
         <Stack.Screen
           name="Home"
           component={HomeScreen}
-          options={homeOptions}
+          options={headerDisabled}
         />
         <Stack.Screen name="Order" component={OrderScreen} />
         <Stack.Screen name="Details" component={DetailsScreen} />
-        <Stack.Screen name="GetStarted" component={GetStartedScreen} />
+        <Stack.Screen
+          name="GetStarted"
+          component={GetStartedScreen}
+          options={headerDisabled}
+        />
         <Stack.Screen name="DeliveryDetail" component={DeliveryDetailScreen} />
       </Stack.Navigator>
     </NavigationContainer>

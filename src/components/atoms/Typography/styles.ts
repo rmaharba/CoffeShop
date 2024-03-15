@@ -10,7 +10,7 @@ import {resText} from '../../../utils';
 
 // TODO: This need to be global, in the future global theme
 export const fontSizesPx: {[key in fontSizes]: number} = {
-  xl: resText(35), //34
+  xl: resText(33), //34
   l: resText(19), //20
   m: resText(17), //18
   s: resText(15), //16
