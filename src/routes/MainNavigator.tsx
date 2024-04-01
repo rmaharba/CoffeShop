@@ -2,6 +2,8 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
+import {storage} from 'src/utils/localstorage';
+
 import {
   HomeScreen,
   OrderScreen,
@@ -14,9 +16,13 @@ import {headerDisabled} from './options';
 const Stack = createNativeStackNavigator();
 
 export const MainNavigator = () => {
+  // The line below is just for testing
+  // storage.delete('loggedUser');
+  const isLogged = storage.getBoolean('loggedUser');
+  const initialRoute = isLogged ? 'Home' : 'GetStarted';
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="GetStarted">
+      <Stack.Navigator initialRouteName={initialRoute}>
         <Stack.Screen
           name="Home"
           component={HomeScreen}

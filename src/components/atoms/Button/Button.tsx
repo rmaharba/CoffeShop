@@ -13,6 +13,7 @@ export const Button: FC<ButtonProps> = ({onPress, label, type = 'l'}) => {
       activeOpacity={0.8}
       style={styles.container}
       onPress={onPress}>
+      {/* TODO: Make the Typography HERE more customizable */}
       <Typography fontType="Bold" fontSize="s" fontColor="white">
         {label ?? ''}
       </Typography>
